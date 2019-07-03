@@ -1,0 +1,63 @@
+{
+    "name": "react-collapsable",
+    "version": "1.0.0",
+    "description": "A Collapsable React Component",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel src -d lib --ignore **/spec.js,**/stories.js,**/spec.ts,**/stories.ts",
+        "test": "jest --watchAll",
+        "test-coverage": "jest --coverage --watchAll",
+        "test-ci": "CI=true jest --coverage",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "prepublish": "yarn run test-coverage && yarn run build"
+    },
+    "author": "Simon Sturgess - @dahliacreative",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/plugin-proposal-export-default-from": "^7.2.0",
+        "@babel/preset-env": "^7.4.5",
+        "@babel/preset-react": "^7.0.0",
+        "@emotion/babel-preset-css-prop": "^10.0.9",
+        "@emotion/core": "^10.0.10",
+        "@storybook/addon-actions": "^5.1.9",
+        "@storybook/addon-knobs": "^5.1.9",
+        "@storybook/addon-links": "^5.1.9",
+        "@storybook/addon-storysource": "^5.1.9",
+        "@storybook/addons": "^5.1.9",
+        "@storybook/react": "^5.1.9",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-emotion": "^10.0.13",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "jest": "^24.8.0",
+        "react": "^16.8.6"
+    },
+    "peerDependencies": {
+        "@emotion/core": "^10.0.10",
+        "react": "^16.8.6"
+    },
+    "dependencies": {
+        "enzyme-to-json": "^3.3.5",
+        "prop-types": "^15.7.2"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "!src/**/stories.{js,ts}",
+            "src/**/*.{js,ts,jsx,ts}"
+        ],
+        "moduleDirectories": [
+            "src",
+            "node_modules"
+        ],
+        "resetMocks": true,
+        "setupFiles": [
+            "./tests.config.js"
+        ],
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ]
+    }
+}
