@@ -1,6 +1,6 @@
 {
     "name": "react-collapsable",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A Collapsable React Component",
     "main": "lib/index.js",
     "scripts": {
