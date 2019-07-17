@@ -9,7 +9,8 @@
         "test-coverage": "jest --coverage --watchAll",
         "test-ci": "CI=true jest --coverage",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "prepublishOnly": "yarn run test-ci && yarn run build"
     },
     "author": "@dahliacreative",
     "license": "MIT",
@@ -42,14 +43,14 @@
         "@storybook/react": "^5.1.9",
         "babel-loader": "^8.0.6",
         "babel-plugin-emotion": "^10.0.13",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
         "eslint": "^5.16.0",
         "eslint-config-react-app": "^3.0.8",
         "eslint-plugin-flowtype": "^2.50.3",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
-        "enzyme": "^3.10.0",
-        "enzyme-adapter-react-16": "^1.14.0",
         "jest": "^24.8.0",
         "react": "^16.8.6"
     },
