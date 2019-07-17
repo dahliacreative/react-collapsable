@@ -39,9 +39,10 @@ const myComponent = () => {
 
 ## Props
 
-| Prop                              | Required | Default |
-| --------------------------------- | -------- | ------- |
-| isOpen (boolean)                  |          |         |
-| minAnimationDuration (in seconds) |          | 0.3     |
-| maxAnimationDuration (in seconds) |          | 1       |
-| speedDivider (in milliseconds)    |          | 1000    |
+| Prop                              | Required | Default       |
+| --------------------------------- | -------- | ------------- |
+| isOpen (boolean)                  |          |               |
+| minAnimationDuration (in seconds) |          | 0.3           |
+| maxAnimationDuration (in seconds) |          | 1             |
+| speedDivider (in milliseconds)    |          | 1000          |
+| easing (css string)               |          | "ease-in-out" |

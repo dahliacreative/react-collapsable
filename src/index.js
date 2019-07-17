@@ -6,6 +6,7 @@ const Collapsable = ({
     minAnimationDuration,
     maxAnimationDuration,
     speedDivider,
+    easing,
     children
 }) => {
     const content = useRef()
@@ -52,7 +53,7 @@ const Collapsable = ({
             style={{
                 overflow: 'hidden',
                 height: state.height,
-                transition: `height ${state.speed}s`
+                transition: `height ${state.speed}s ${easing}`
             }}>
             <div ref={content} style={{ overflow: 'auto' }}>
                 {children}
@@ -65,14 +66,16 @@ Collapsable.propTypes = {
     isOpen: PropTypes.bool,
     minAnimationDuration: PropTypes.number,
     maxAnimationDuration: PropTypes.number,
-    speedDivider: PropTypes.number
+    speedDivider: PropTypes.number,
+    easing: PropTypes.string
 }
 
 Collapsable.defaultProps = {
     isOpen: false,
     minAnimationDuration: 0.3,
     maxAnimationDuration: 1,
-    speedDivider: 1000
+    speedDivider: 1000,
+    easing: 'ease-in-out'
 }
 
 export default Collapsable

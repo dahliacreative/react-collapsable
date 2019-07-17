@@ -1,7 +1,7 @@
 import React from 'react'
 import Collapsable from '.'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean, number } from '@storybook/addon-knobs'
+import { withKnobs, boolean, number, text } from '@storybook/addon-knobs'
 
 storiesOf('Collapsable', module)
     .addDecorator(withKnobs)
@@ -10,7 +10,8 @@ storiesOf('Collapsable', module)
             isOpen={boolean('isOpen', false)}
             minAnimationDuration={number('minAnimationDuration', 0.3)}
             maxAnimationDuration={number('maxAnimationDuration', 1)}
-            speedDivider={number('speedDivider', 1000)}>
+            speedDivider={number('speedDivider', 1000)}
+            easing={text('Easing', 'ease-in-out')}>
             <h1>This is a title</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
