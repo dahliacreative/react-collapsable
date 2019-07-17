@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/299653f46371c688a3ab/maintainability)](https://codeclimate.com/github/dahliacreative/react-collapsable/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/299653f46371c688a3ab/test_coverage)](https://codeclimate.com/github/dahliacreative/react-collapsable/test_coverage)
 
-A collapsable react component, animated bases on the content.
+A collapsable react component, animated using CSS transitions based on the height of your content.
 
 ## Installation
 
