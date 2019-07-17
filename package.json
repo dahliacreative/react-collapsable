@@ -9,8 +9,7 @@
         "test-coverage": "jest --coverage --watchAll",
         "test-ci": "CI=true jest --coverage",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook",
-        "prepublish": "yarn run test-coverage && yarn run build"
+        "build-storybook": "build-storybook"
     },
     "author": "@dahliacreative",
     "license": "MIT",
