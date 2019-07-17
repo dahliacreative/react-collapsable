@@ -1,6 +1,6 @@
 {
     "name": "react-collapsable",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A Collapsable React Component",
     "main": "lib/index.js",
     "scripts": {
@@ -52,15 +52,13 @@
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
         "jest": "^24.8.0",
-        "react": "^16.8.6"
+        "react": "^16.8.6",
+        "enzyme-to-json": "^3.3.5",
+        "prop-types": "^15.7.2"
     },
     "peerDependencies": {
         "@emotion/core": "^10.0.10",
         "react": "^16.8.6"
-    },
-    "dependencies": {
-        "enzyme-to-json": "^3.3.5",
-        "prop-types": "^15.7.2"
     },
     "jest": {
         "collectCoverageFrom": [
