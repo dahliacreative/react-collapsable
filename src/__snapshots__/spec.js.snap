@@ -1,6 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Collapsable/> Renders open by default 1`] = `
+exports[`<Collapsable/> Closes 1`] = `
+<Collapsable
+  isOpen={false}
+  maxAnimationDuration={1}
+  minAnimationDuration={0.3}
+  speedDivider={1000}
+>
+  <div
+    style={
+      Object {
+        "height": 500,
+        "overflow": "hidden",
+        "transition": "height 0.5s",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "overflow": "auto",
+        }
+      }
+    >
+      <h1>
+        My Title
+      </h1>
+    </div>
+  </div>
+</Collapsable>
+`;
+
+exports[`<Collapsable/> Opens 1`] = `
 <Collapsable
   isOpen={true}
   maxAnimationDuration={1}
@@ -12,11 +43,48 @@ exports[`<Collapsable/> Renders open by default 1`] = `
       Object {
         "height": 0,
         "overflow": "hidden",
-        "transition": "height 0.3s",
+        "transition": "height 0s",
       }
     }
   >
-    <div>
+    <div
+      style={
+        Object {
+          "overflow": "auto",
+        }
+      }
+    >
+      <h1>
+        My Title
+      </h1>
+    </div>
+  </div>
+</Collapsable>
+`;
+
+exports[`<Collapsable/> Renders open by default 1`] = `
+<Collapsable
+  isOpen={true}
+  maxAnimationDuration={1}
+  minAnimationDuration={0.3}
+  speedDivider={1000}
+>
+  <div
+    style={
+      Object {
+        "height": 500,
+        "overflow": "hidden",
+        "transition": "height 0.5s",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "overflow": "auto",
+        }
+      }
+    >
       <h1>
         My Title
       </h1>
@@ -41,7 +109,75 @@ exports[`<Collapsable/> Renders without crashing 1`] = `
       }
     }
   >
-    <div>
+    <div
+      style={
+        Object {
+          "overflow": "auto",
+        }
+      }
+    >
+      <h1>
+        My Title
+      </h1>
+    </div>
+  </div>
+</Collapsable>
+`;
+
+exports[`<Collapsable/> Respects maxAnimationDuration 1`] = `
+<Collapsable
+  isOpen={true}
+  maxAnimationDuration={1}
+  minAnimationDuration={0.3}
+  speedDivider={1000}
+>
+  <div
+    style={
+      Object {
+        "height": 0,
+        "overflow": "hidden",
+        "transition": "height 0s",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "overflow": "auto",
+        }
+      }
+    >
+      <h1>
+        My Title
+      </h1>
+    </div>
+  </div>
+</Collapsable>
+`;
+
+exports[`<Collapsable/> Respects minAnimationDuration 1`] = `
+<Collapsable
+  isOpen={true}
+  maxAnimationDuration={1}
+  minAnimationDuration={0.3}
+  speedDivider={1000}
+>
+  <div
+    style={
+      Object {
+        "height": 0,
+        "overflow": "hidden",
+        "transition": "height 0s",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "overflow": "auto",
+        }
+      }
+    >
       <h1>
         My Title
       </h1>

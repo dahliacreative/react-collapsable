@@ -9,8 +9,10 @@ const Collapsable = ({
     children
 }) => {
     const content = useRef()
-    const [height, setHeight] = useState(isOpen ? 'auto' : 0)
-    const [speed, setSpeed] = useState(0)
+    const [state, setState] = useState({
+        height: isOpen ? 'auto' : 0,
+        speed: 0
+    })
 
     useEffect(() => {
         if (isOpen) {
@@ -22,10 +24,20 @@ const Collapsable = ({
                     : time > maxAnimationDuration
                     ? maxAnimationDuration
                     : time
-            setHeight(contentHeight)
-            setSpeed(animation)
+            content.current.style.visibility = 'visible'
+            setState({
+                ...state,
+                height: contentHeight,
+                speed: animation
+            })
         } else {
-            setHeight(0)
+            setState({
+                ...state,
+                height: 0
+            })
+            setTimeout(() => {
+                content.current.style.visibility = 'hidden'
+            }, state.speed * speedDivider)
         }
     }, [
         isOpen,
@@ -39,10 +51,12 @@ const Collapsable = ({
         <div
             style={{
                 overflow: 'hidden',
-                height: height,
-                transition: `height ${speed}s`
+                height: state.height,
+                transition: `height ${state.speed}s`
             }}>
-            <div ref={content}>{children}</div>
+            <div ref={content} style={{ overflow: 'auto' }}>
+                {children}
+            </div>
         </div>
     )
 }
