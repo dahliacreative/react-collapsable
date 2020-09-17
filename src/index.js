@@ -7,13 +7,27 @@ const Collapsable = ({
     maxAnimationDuration,
     speedDivider,
     easing,
-    children
+    children,
+    keepChildrenOnClose
 }) => {
     const content = useRef()
     const [state, setState] = useState({
         height: isOpen ? 'auto' : 0,
         speed: 0
     })
+
+    const [keepChildren, toggleChildren] = useState(isOpen)
+
+    const handleClose = () => {
+        if (!isOpen) {
+            content.current.style.visibility = 'hidden'
+
+            if (!keepChildrenOnClose) {
+                // remove child
+                toggleChildren(false)
+            }
+        }
+    }
 
     useEffect(() => {
         if (isOpen) {
@@ -26,6 +40,7 @@ const Collapsable = ({
                     ? maxAnimationDuration
                     : time
             content.current.style.visibility = 'visible'
+            toggleChildren(true)
             setState({
                 ...state,
                 height: contentHeight,
@@ -36,16 +51,13 @@ const Collapsable = ({
                 ...state,
                 height: 0
             })
-            setTimeout(() => {
-                content.current.style.visibility = 'hidden'
-            }, state.speed * speedDivider)
         }
     }, [
         isOpen,
         minAnimationDuration,
         maxAnimationDuration,
         speedDivider,
-        children
+        keepChildren
     ])
 
     return (
@@ -54,9 +66,10 @@ const Collapsable = ({
                 overflow: 'hidden',
                 height: state.height,
                 transition: `height ${state.speed}s ${easing}`
-            }}>
+            }}
+            onTransitionEnd={handleClose}>
             <div ref={content} style={{ overflow: 'auto' }}>
-                {children}
+                {keepChildren && children}
             </div>
         </div>
     )
@@ -67,7 +80,8 @@ Collapsable.propTypes = {
     minAnimationDuration: PropTypes.number,
     maxAnimationDuration: PropTypes.number,
     speedDivider: PropTypes.number,
-    easing: PropTypes.string
+    easing: PropTypes.string,
+    keepChildrenOnClose: PropTypes.bool
 }
 
 Collapsable.defaultProps = {

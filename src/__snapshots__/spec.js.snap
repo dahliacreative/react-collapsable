@@ -9,6 +9,7 @@ exports[`<Collapsable/> Closes 1`] = `
   speedDivider={1000}
 >
   <div
+    onTransitionEnd={[Function]}
     style={
       Object {
         "height": 500,
@@ -41,6 +42,7 @@ exports[`<Collapsable/> Opens 1`] = `
   speedDivider={1000}
 >
   <div
+    onTransitionEnd={[Function]}
     style={
       Object {
         "height": 0,
@@ -55,11 +57,7 @@ exports[`<Collapsable/> Opens 1`] = `
           "overflow": "auto",
         }
       }
-    >
-      <h1>
-        My Title
-      </h1>
-    </div>
+    />
   </div>
 </Collapsable>
 `;
@@ -73,6 +71,7 @@ exports[`<Collapsable/> Renders open by default 1`] = `
   speedDivider={1000}
 >
   <div
+    onTransitionEnd={[Function]}
     style={
       Object {
         "height": 500,
@@ -105,6 +104,7 @@ exports[`<Collapsable/> Renders without crashing 1`] = `
   speedDivider={1000}
 >
   <div
+    onTransitionEnd={[Function]}
     style={
       Object {
         "height": 0,
@@ -119,11 +119,7 @@ exports[`<Collapsable/> Renders without crashing 1`] = `
           "overflow": "auto",
         }
       }
-    >
-      <h1>
-        My Title
-      </h1>
-    </div>
+    />
   </div>
 </Collapsable>
 `;
@@ -137,6 +133,7 @@ exports[`<Collapsable/> Respects maxAnimationDuration 1`] = `
   speedDivider={1000}
 >
   <div
+    onTransitionEnd={[Function]}
     style={
       Object {
         "height": 0,
@@ -151,11 +148,7 @@ exports[`<Collapsable/> Respects maxAnimationDuration 1`] = `
           "overflow": "auto",
         }
       }
-    >
-      <h1>
-        My Title
-      </h1>
-    </div>
+    />
   </div>
 </Collapsable>
 `;
@@ -169,6 +162,7 @@ exports[`<Collapsable/> Respects minAnimationDuration 1`] = `
   speedDivider={1000}
 >
   <div
+    onTransitionEnd={[Function]}
     style={
       Object {
         "height": 0,
@@ -183,11 +177,7 @@ exports[`<Collapsable/> Respects minAnimationDuration 1`] = `
           "overflow": "auto",
         }
       }
-    >
-      <h1>
-        My Title
-      </h1>
-    </div>
+    />
   </div>
 </Collapsable>
 `;
